@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+	<style>
+		/* CSS Here */
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="pageHeading">Good Afternoon NZ</h1>
+	<p id="statement">The weather today is <span id="weather">sunny</span>.</p>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+		// Custom js Here
+
+		// Weather data
+		var weatherForecast = {
+			mon: 'sunny',
+			tue: 'cloudy',
+			wed:  'rainy',
+			thur: 'thunder',
+			fri: 'windy',
+			sat: 'fine',
+			sun: 'some showers with fine periods'
+		};
+
+		// DOM HTML grabbing function
+		function grabElements () {
+			var heading = document.getElementById('pageHeading');
+			var statement = document.getElementById('statement');
+			var weather = document.getElementById('weather');
+
+			console.log(heading);
+			console.log(statement);
+			console.log(weather);
+		}
+
+		console.log(weatherForecast.sun)
+
+		grabElements();
+	</script>
+</body>
+</html>
